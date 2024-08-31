@@ -2,6 +2,7 @@
 Alumno: Franco D'Angelo
 Legajo: 8824/2
 Link a youtube: https://youtu.be/8mXHUHrZ2qs
+CAMBIAR COLOR CON ENTER, REINICIAR CON ESPACIO
 Saludos profe, buenas noches y saludos a toda su familia, incluidas mascotas posibles
 */
 let ref
