@@ -15,7 +15,6 @@ function preload() {
   }
 }
 
-
 //////////////////////////////////////////DIALOGOS
 
 function dialogo(posX, posY, _id) {
@@ -33,13 +32,19 @@ function GetTextCSV(_id, _columna) {
     if (IDColumna[fila] === _id) {
       return guion.getColumn(_columna)[fila];
     }
-    return "ID no encontrado: " + _id;
   }
+  return "ID no encontrado: " + _id;
 }
 
 ////////////////////////////////////////botones
 
 function mouseClicked() {
+
+  if (steps.isPlaying()) {
+    steps.stop()
+  } else {
+    steps.play();
+  }
 
   if (mouseX > 160 && mouseX < 160+300 && mouseY > 300 && mouseY < 300+80 && estado=="menu") {
     estado = "nar0";
@@ -101,18 +106,19 @@ function setup() {
   createCanvas(640, 480);
   colorMode(HSB, 360, 100, 100);
   textFont(tnr);
-  // sonam.setVolume(0.5);
+  sonam.setVolume(0.1);
+  sonam.play();
   estado = "menu";
 }
 
 ////////////////////////////////////////////DRAW
-
 
 function draw() {
   background(0);
   print(estado);
   stroke(37, 58, 88);
   strokeWeight(2);
+  
 
 
   if ( estado == "menu") {
@@ -148,6 +154,7 @@ function draw() {
     dialogo(75, height/2+10, 'op1');
     dialogo(75, height/2+40, 'op1a');
     dialogo(75, height/2+70, 'op1b');
+    dialogo(75, height/2+100, 'op1c');
     text("continuar...", 370, 455);
     text("arrepentirse", 80, 455);
   } else if ( estado == "nar2") {
@@ -161,6 +168,7 @@ function draw() {
     dialogo(75, height/2+40, 'na2a');
     dialogo(75, height/2+70, 'na2b');
     dialogo(75, height/2+100, 'na2c');
+    dialogo(75, height/2+130, 'na2d');
     text("Adentrarse", 370, 455);
     text("Pelear", 80, 455);
   } else if ( estado == "nar3") {
@@ -171,6 +179,7 @@ function draw() {
     fill(255);
     textSize(20);
     dialogo(75, height/2+10, 'na3');
+    dialogo(75, height/2+40, 'na3a');
     text("Derecha", 370, 455);
     text("Izquierda", 80, 455);
   } else if ( estado == "nar4a") {
@@ -181,6 +190,7 @@ function draw() {
     fill(255);
     textSize(20);
     dialogo(75, height/2+10, 'na3');
+    dialogo(75, height/2+40, 'na3a');
     text("Derecha", 370, 455);
     text("Izquierda", 80, 455);
   } else if ( estado == "nar5a") {
@@ -191,6 +201,7 @@ function draw() {
     fill(255);
     textSize(20);
     dialogo(75, height/2+10, 'na3');
+    dialogo(75, height/2+40, 'na3a');
     text("Derecha", 370, 455);
     text("Izquierda", 80, 455);
   } else if ( estado == "nar6a") {
@@ -201,20 +212,31 @@ function draw() {
     fill(255);
     textSize(20);
     dialogo(75, height/2+10, 'na3');
+    dialogo(75, height/2+40, 'na3a');
     text("Derecha", 370, 455);
     text("Izquierda", 80, 455);
   } else if ( estado == "fb2") {
-    fill(352, 78, 40);
+    fill(255);
     textSize(55);
-    text("Final bueno 2", 120, 100);
+    text("Final bueno 2", 130, 100);
+    dialogo(50, 150, 'fb2');
+    dialogo(50, 180, 'fb2a');
+    dialogo(50, 210, 'fb2b');
+    dialogo(50, 240, 'fb2c');
+    fill(352, 78, 40);
     rect(160, 300, 300, 80);
     fill(255);
     textSize(40);
     text("Creditos", 240, 355);
   } else if ( estado == "fm2") {
-    fill(352, 78, 40);
+    fill(255);
     textSize(55);
     text("Final malo 2", 120, 100);
+    dialogo(50, 150, 'fm2');
+    dialogo(50, 180, 'fm2a');
+    dialogo(50, 210, 'fm2b');
+    dialogo(50, 240, 'fm2c');
+    fill(352, 78, 40);
     rect(160, 300, 300, 80);
     fill(255);
     textSize(40);
@@ -226,7 +248,9 @@ function draw() {
     rect(70, height/2, 510, 170);
     fill(255);
     textSize(20);
-    dialogo(75, height/2+10, 'na4');
+    dialogo(75, height/2+10, 'op2');
+    dialogo(75, height/2+40, 'op2a');
+    dialogo(75, height/2+70, 'caz1');
     text("Avanzar en soledad", 370, 455);
     text("Ser acomapañado", 80, 455);
   } else if ( estado == "nar4b") {
@@ -237,12 +261,17 @@ function draw() {
     fill(255);
     textSize(20);
     dialogo(75, height/2+10, 'na3');
+    dialogo(75, height/2+40, 'na3a');
     text("Derecha", 370, 455);
     text("Izquierda", 80, 455);
   } else if ( estado == "fb3") {
     fill(255);
     textSize(55);
     text("Final bueno 3", 120, 100);
+    dialogo(50, 150, 'fb3');
+    dialogo(50, 180, 'fb3a');
+    dialogo(50, 210, 'fb3b');
+    dialogo(50, 240, 'fb3c');
     fill(352, 78, 40);
     rect(160, 300, 300, 80);
     fill(255);
@@ -252,6 +281,10 @@ function draw() {
     fill(255);
     textSize(55);
     text("Final bueno 1", 120, 100);
+    dialogo(50, 150, 'fb1');
+    dialogo(50, 180, 'fb1a');
+    dialogo(50, 210, 'fb1b');
+    dialogo(50, 240, 'fb1c');
     fill(352, 78, 40);
     rect(160, 300, 300, 80);
     fill(255);
@@ -261,6 +294,9 @@ function draw() {
     fill(255);
     textSize(55);
     text("Final malo 1", 120, 100);
+    dialogo(50, 150, 'fm1');
+    dialogo(50, 180, 'fm1a');
+
     fill(352, 78, 40);
     rect(160, 300, 300, 80);
     fill(255);
