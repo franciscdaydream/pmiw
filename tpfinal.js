@@ -1,5 +1,5 @@
 let estado, guion, steps, sonam, tnr, logo;
-let imagenes = [];
+let imagen = [];
 
 function preload() {
   soundFormats('mp3', 'ogg');
@@ -11,9 +11,10 @@ function preload() {
   ///////////////////////////////////////////IMAGENES
 
   for (let i=0; i<10; i++) {
-    iamgenes[i] = loadImage("data/imagen"+i+".png");
+    imagen[i] = loadImage("data/imagen"+i+".png");
   }
 }
+
 
 //////////////////////////////////////////DIALOGOS
 
@@ -122,6 +123,7 @@ function draw() {
 
 
   if ( estado == "menu") {
+    image(imagen[0],0,0);
     fill(255);
     textSize(55);
     image(logo, 130, 0, 350, 150);
@@ -133,7 +135,7 @@ function draw() {
     text("Comenzar", 220, 355);
   } else if ( estado == "nar0") {
 
-
+image(imagen[1],0,0);
     fill(352, 78, 40);
     rect(70, height/2, 510, 170);
     rect(340, 420, 250, 50);
@@ -145,6 +147,7 @@ function draw() {
     dialogo(75, height/2+100, 'na1c');
     text("continuar...", 370, 455);
   } else if ( estado == "nar1") {
+    image(imagen[2],0,0);
     fill(352, 78, 40);
     rect(340, 420, 250, 50);
     rect(60, 420, 250, 50);
@@ -158,6 +161,7 @@ function draw() {
     text("continuar...", 370, 455);
     text("arrepentirse", 80, 455);
   } else if ( estado == "nar2") {
+    image(imagen[3],0,0);
     fill(352, 78, 40);
     rect(340, 420, 250, 50);
     rect(60, 420, 250, 50);
@@ -172,6 +176,7 @@ function draw() {
     text("Adentrarse", 370, 455);
     text("Pelear", 80, 455);
   } else if ( estado == "nar3") {
+    image(imagen[3],0,0);
     fill(352, 78, 40);
     rect(340, 420, 250, 50);
     rect(60, 420, 250, 50);
@@ -183,6 +188,7 @@ function draw() {
     text("Derecha", 370, 455);
     text("Izquierda", 80, 455);
   } else if ( estado == "nar4a") {
+    image(imagen[3],0,0);
     fill(352, 78, 40);
     rect(340, 420, 250, 50);
     rect(60, 420, 250, 50);
@@ -194,6 +200,7 @@ function draw() {
     text("Derecha", 370, 455);
     text("Izquierda", 80, 455);
   } else if ( estado == "nar5a") {
+    image(imagen[3],0,0);
     fill(352, 78, 40);
     rect(340, 420, 250, 50);
     rect(60, 420, 250, 50);
@@ -205,6 +212,7 @@ function draw() {
     text("Derecha", 370, 455);
     text("Izquierda", 80, 455);
   } else if ( estado == "nar6a") {
+    image(imagen[3],0,0);
     fill(352, 78, 40);
     rect(340, 420, 250, 50);
     rect(60, 420, 250, 50);
@@ -216,6 +224,7 @@ function draw() {
     text("Derecha", 370, 455);
     text("Izquierda", 80, 455);
   } else if ( estado == "fb2") {
+   image(imagen[9],0,0);
     fill(255);
     textSize(55);
     text("Final bueno 2", 130, 100);
@@ -229,6 +238,7 @@ function draw() {
     textSize(40);
     text("Creditos", 240, 355);
   } else if ( estado == "fm2") {
+    image(imagen[7],0,0);
     fill(255);
     textSize(55);
     text("Final malo 2", 120, 100);
@@ -242,6 +252,7 @@ function draw() {
     textSize(40);
     text("Creditos", 240, 355);
   } else if ( estado == "op2") {
+    image(imagen[4],0,0);
     fill(352, 78, 40);
     rect(340, 420, 250, 50);
     rect(60, 420, 250, 50);
@@ -254,6 +265,7 @@ function draw() {
     text("Avanzar en soledad", 370, 455);
     text("Ser acomapañado", 80, 455);
   } else if ( estado == "nar4b") {
+    image(imagen[3],0,0);
     fill(352, 78, 40);
     rect(340, 420, 250, 50);
     rect(60, 420, 250, 50);
@@ -265,6 +277,7 @@ function draw() {
     text("Derecha", 370, 455);
     text("Izquierda", 80, 455);
   } else if ( estado == "fb3") {
+    image(imagen[8],0,0);
     fill(255);
     textSize(55);
     text("Final bueno 3", 120, 100);
@@ -278,6 +291,7 @@ function draw() {
     textSize(40);
     text("Creditos", 240, 355);
   } else if ( estado == "fb1") {
+    image(imagen[6],0,0);
     fill(255);
     textSize(55);
     text("Final bueno 1", 120, 100);
@@ -291,6 +305,7 @@ function draw() {
     textSize(40);
     text("Creditos", 240, 355);
   } else if ( estado == "fm1") {
+    image(imagen[5],0,0);
     fill(255);
     textSize(55);
     text("Final malo 1", 120, 100);
