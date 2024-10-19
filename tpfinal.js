@@ -4,7 +4,7 @@ TP final pmiw - pt1
 Alumnos: Franco D'Angelo - 88224/2
             Iara Vilte - 94714/4
 
-Link al video de Franco:
+Link al video de Franco: https://youtu.be/SRk_BZKUUdM
 
 */
 let estado, guion, steps, sonam, tnr, logo;
