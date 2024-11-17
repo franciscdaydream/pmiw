@@ -1,9 +1,10 @@
 /* TP final etapa 2 
   Alumno: Franco D'Angelo 
   Legajo: 88224/2
-  Link de youtube:
+  Link de youtube: https://youtu.be/jYCFd_kd3gY
   Aclaraciones: -No he logrado que se pueda reiniciar, en el caso de ganar no reaparecen los murcielagos
   y en caso de perder no se puede reiniciar directamente
+                - El trabajo fue hecho de manera individual debido a que mi compañera perdio la materia
 */
 let juegoFunc, estado, sonam, sonlat, tnr
 let Vivo = true;
