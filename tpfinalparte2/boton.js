@@ -28,6 +28,8 @@ class boton {
   
       if (mouseIsPressed && mouseX<this.pX+this.tX/2 && mouseX>this.pX-this.tX/2 && mouseY> this.pY-this.tY/2 && mouseY< this.pY+this.tY/2) {
         return true
+      }  else {
+        return false
       }
     }
   }
