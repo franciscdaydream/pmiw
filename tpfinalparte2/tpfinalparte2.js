@@ -1,7 +1,7 @@
 /* TP final etapa 2 
   Alumno: Franco D'Angelo 
   Legajo: 88224/2
-  Link de youtube:
+  Link de youtube: https://youtu.be/g4_MBJyXrAg
 */
 let juegoFunc, sonam, sonlat, tnr
 let imagen = [];
